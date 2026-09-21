@@ -1019,3 +1019,42 @@
     }
   }
 }
+/* =====================================================
+   SCROLL REVEAL
+===================================================== */
+
+.reveal-element {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   MOBILE MENU ANIMATION
+===================================================== */
+
+#mobile-menu {
+    animation: menuSlideDown 0.25s ease;
+}
+
+@keyframes menuSlideDown {
+
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
