@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    >
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./output.css">
+
+    <!-- Favicon -->
+    <link
+        rel="icon"
+        type="image/jpeg"
+        href="./asset/images/favicon.jpeg"
+    >
+
+    <title>Oluwafemi Adeoya | Frontend Developer</title>
+</head>
+
+<body class="bg-white text-gray-900 antialiased">
+
+    <!-- ============================= -->
+    <!-- NAVBAR -->
+    <!-- ============================= -->
+
+    <header class="fixed top-0 left-0 z-50 w-full border-b border-gray-200 bg-white/95 backdrop-blur">
+        <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+
+            <!-- Logo -->
+            <a href="#home" class="flex items-center">
+                <img
+                    src="./asset/images/Logo (1).png"
+                    alt="Oluwafemi Adeoya Logo"
+                    class="h-20 w-auto"
+                >
+            </a>
+
+            <!-- Desktop Navigation -->
+            <ul class="hidden items-center gap-8 md:flex">
+                <li>
+                    <a
+                        href="#home"
+                        class="font-medium transition hover:text-blue-600"
+                    >
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#about"
+                        class="font-medium transition hover:text-blue-600"
+                    >
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#skills"
+                        class="font-medium transition hover:text-blue-600"
+                    >
+                        Skills
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#projects"
+                        class="font-medium transition hover:text-blue-600"
+                    >
+                        Projects
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#contact"
+                        class="rounded-lg bg-blue-600 px-5 py-2.5 font-medium text-white transition hover:bg-blue-700"
+                    >
+                        Contact
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <button
+                id="menu-btn"
+                type="button"
+                aria-label="Open menu"
+                class="text-2xl md:hidden"
+            >
+                <i class="fas fa-bars"></i>
+            </button>
+
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div
+            id="mobile-menu"
+            class="hidden border-t border-gray-200 bg-white md:hidden"
+        >
+            <ul class="flex flex-col px-6 py-5">
+
+                <li>
+                    <a
+                        href="#home"
+                        class="mobile-link block border-b border-gray-100 py-4 font-medium hover:text-blue-600"
+                    >
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#about"
+                        class="mobile-link block border-b border-gray-100 py-4 font-medium hover:text-blue-600"
+                    >
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#skills"
+                        class="mobile-link block border-b border-gray-100 py-4 font-medium hover:text-blue-600"
+                    >
+                        Skills
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#projects"
+                        class="mobile-link block border-b border-gray-100 py-4 font-medium hover:text-blue-600"
+                    >
+                        Projects
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#contact"
+                        class="mobile-link block py-4 font-medium text-blue-600"
+                    >
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </header>
+
+
+    <!-- ============================= -->
+    <!-- HERO -->
+    <!-- ============================= -->
+
+    <main>
+
+        <section
+            id="home"
+            class="flex min-h-screen items-center px-6 pb-16 pt-32 lg:px-8"
+        >
+
+            <div class="mx-auto grid w-full max-w-7xl items-center gap-12 md:grid-cols-2">
+
+                <!-- Hero Text -->
+                <div>
+
+                    <p class="mb-4 font-semibold uppercase tracking-widest text-blue-600">
+                        Hello, I'm
+                    </p>
+
+                    <h1 class="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
+                        Oluwafemi
+                        <span class="text-blue-600">
+                            Adeoya
+                        </span>
+                    </h1>
+
+                    <h2 class="mt-4 text-2xl font-semibold text-gray-700 sm:text-3xl">
+                        Frontend Developer & UI/UX Enthusiast
+                    </h2>
+
+                    <p class="mt-6 max-w-xl text-lg leading-8 text-gray-600">
+                        I build responsive and user-friendly websites that combine
+                        clean design with practical functionality. I'm currently
+                        developing my frontend skills through real-world projects
+                        and continuous learning.
+                    </p>
+
+                    <!-- Buttons -->
+                    <div class="mt-8 flex flex-wrap gap-4">
+
+                        <a
+                            href="#contact"
+                            class="rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white shadow-lg shadow-blue-600/20 transition hover:-translate-y-1 hover:bg-blue-700"
+                        >
+                            Contact Me
+                        </a>
+
+                        <a
+                            href="#projects"
+                            class="rounded-lg border-2 border-gray-900 px-6 py-3 font-semibold transition hover:bg-gray-900 hover:text-white"
+                        >
+                            View Projects
+                        </a>
+
+                        <a
+                            href="https://github.com/Dev-Victor01"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="rounded-lg border-2 border-gray-300 px-6 py-3 font-semibold transition hover:border-blue-600 hover:text-blue-600"
+                        >
+                            <i class="fab fa-github mr-2"></i>
+                            GitHub
+                        </a>
+
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="mt-8 flex items-center gap-5">
+
+                        <a
+                            href="https://github.com/Dev-Victor01"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub"
+                            class="text-2xl text-gray-600 transition hover:text-blue-600"
+                        >
+                            <i class="fab fa-github"></i>
+                        </a>
+
+                        <a
+                            href="https://www.linkedin.com/in/adeoya-oluwafemi-victor-538869427/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn"
+                            class="text-2xl text-gray-600 transition hover:text-blue-600"
+                        >
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+
+                        <a
+                            href="mailto:adeoyaoluwafemivictor@gmail.com"
+                            aria-label="Email"
+                            class="text-2xl text-gray-600 transition hover:text-blue-600"
+                        >
+                            <i class="fas fa-envelope"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Hero Image -->
+                <div class="flex justify-center">
+
+                    <div class="relative">
+
+                        <div class="absolute -inset-4 rounded-full bg-blue-100 blur-2xl"></div>
+
+                        <div class="relative h-72 w-72 overflow-hidden rounded-full border-8 border-white shadow-2xl sm:h-80 sm:w-80 lg:h-96 lg:w-96">
+
+                            <img
+                                src="./asset/images/profile.png"
+                                alt="Oluwafemi Adeoya"
+                                class="h-full w-full object-cover"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- ABOUT -->
+        <!-- ============================= -->
+
+        <section
+            id="about"
+            class="bg-gray-50 px-6 py-24 lg:px-8"
+        >
+
+            <div class="mx-auto max-w-7xl">
+
+                <div class="mb-16 text-center">
+
+                    <p class="font-semibold uppercase tracking-widest text-blue-600">
+                        About Me
+                    </p>
+
+                    <h2 class="mt-3 text-3xl font-bold sm:text-4xl">
+                        Who I Am
+                    </h2>
+
+                    <div class="mx-auto mt-4 h-1 w-16 rounded bg-blue-600"></div>
+
+                </div>
+
+
+                <div class="grid items-center gap-12 md:grid-cols-2">
+
+                    <!-- About Image -->
+                    <div class="flex justify-center">
+
+                        <div class="overflow-hidden rounded-2xl shadow-xl">
+
+                            <img
+                                src="./asset/images/profile 3.png"
+                                alt="Oluwafemi Adeoya"
+                                class="h-full max-h-[500px] w-full object-cover"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- About Text -->
+                    <div>
+
+                        <h3 class="text-2xl font-bold">
+                            Frontend Developer & UI/UX Enthusiast
+                        </h3>
+
+                        <p class="mt-6 leading-8 text-gray-600">
+                            I'm a frontend developer and UI/UX enthusiast passionate
+                            about creating clean, responsive and user-friendly
+                            digital experiences.
+                        </p>
+
+                        <p class="mt-5 leading-8 text-gray-600">
+                            I'm currently building practical experience through
+                            software development training and personal projects.
+                            My focus is on improving my frontend development skills
+                            while learning how good design and technology work
+                            together.
+                        </p>
+
+                        <!-- Information -->
+                        <div class="mt-8 space-y-4">
+
+                            <div class="flex gap-3">
+                                <span class="font-semibold">
+                                    Focus:
+                                </span>
+
+                                <span class="text-gray-600">
+                                    Frontend Development & UI/UX Design
+                                </span>
+                            </div>
+
+                            <div class="flex gap-3">
+                                <span class="font-semibold">
+                                    Skills:
+                                </span>
+
+                                <span class="text-gray-600">
+                                    HTML, CSS, Tailwind CSS, JavaScript
+                                </span>
+                            </div>
+
+                            <div class="flex gap-3">
+                                <span class="font-semibold">
+                                    Tools:
+                                </span>
+
+                                <span class="text-gray-600">
+                                    Git, GitHub, VS Code & Figma
+                                </span>
+                            </div>
+
+                            <div class="flex gap-3">
+                                <span class="font-semibold">
+                                    Availability:
+                                </span>
+
+                                <span class="text-gray-600">
+                                    Freelance & entry-level opportunities
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- SKILLS -->
+        <!-- ============================= -->
+
+        <section
+            id="skills"
+            class="px-6 py-24 lg:px-8"
+        >
+
+            <div class="mx-auto max-w-7xl">
+
+                <div class="mb-16 text-center">
+
+                    <p class="font-semibold uppercase tracking-widest text-blue-600">
+                        My Skills
+                    </p>
+
+                    <h2 class="mt-3 text-3xl font-bold sm:text-4xl">
+                        Skills & Technologies
+                    </h2>
+
+                </div>
+
+
+                <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+                    <!-- Frontend -->
+                    <div class="rounded-2xl border border-gray-200 bg-white p-7 shadow-sm transition hover:-translate-y-2 hover:shadow-xl">
+
+                        <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-xl text-blue-600">
+                            <i class="fas fa-code"></i>
+                        </div>
+
+                        <h3 class="text-xl font-bold">
+                            Frontend
+                        </h3>
+
+                        <ul class="mt-5 space-y-3 text-gray-600">
+
+                            <li>
+                                <i class="fas fa-check mr-2 text-blue-600"></i>
+                                HTML5
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check mr-2 text-blue-600"></i>
+                                CSS3
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check mr-2 text-blue-600"></i>
+                                Tailwind CSS
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check mr-2 text-blue-600"></i>
+                                JavaScript
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check mr-2 text-blue-600"></i>
+                                Responsive Design
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <!-- Tools -->
+                    <div class="rounded-2xl border border-gray-200 bg-white p-7 shadow-sm transition hover:-translate-y-2 hover:shadow-xl">
+
+                        <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-xl text-blue-600">
+                            <i class="fas fa-tools"></i>
+                        </div>
+
+                        <h3 class="text-xl font-bold">
+                            Tools
+                        </h3>
+
+                        <ul class="mt-5 space-y-3 text-gray-600">
+
+                            <li>
+                                <i class="fas fa-check mr-2 text-blue-600"></i>
+                                Git
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check mr-2 text-blue-600"></i>
+                                GitHub
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check mr-2 text-blue-600"></i>
+                                VS Code
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check mr-2 text-blue-600"></i>
+                                Figma
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <!-- Design -->
+                    <div class="rounded-2xl border border-gray-200 bg-white p-7 shadow-sm transition hover:-translate-y-2 hover:shadow-xl">
+
+                        <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-xl text-blue-600">
+                            <i class="fas fa-palette"></i>
+                        </div>
+
+                        <h3 class="text-xl font-bold">
+                            Design
+                        </h3>
+
+                        <ul class="mt-5 space-y-3 text-gray-600">
+
+                            <li>
+                                <i class="fas fa-check mr-2 text-blue-600"></i>
+                                UI/UX Design
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check mr-2 text-blue-600"></i>
+                                Web Design
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check mr-2 text-blue-600"></i>
+                                Prototyping
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check mr-2 text-blue-600"></i>
+                                User Experience
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <!-- Other -->
+                    <div class="rounded-2xl border border-gray-200 bg-white p-7 shadow-sm transition hover:-translate-y-2 hover:shadow-xl">
+
+                        <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-xl text-blue-600">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+
+                        <h3 class="text-xl font-bold">
+                            Other
+                        </h3>
+
+                        <ul class="mt-5 space-y-3 text-gray-600">
+
+                            <li>
+                                <i class="fas fa-check mr-2 text-blue-600"></i>
+                                Problem Solving
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check mr-2 text-blue-600"></i>
+                                SEO Basics
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check mr-2 text-blue-600"></i>
+                                Team Collaboration
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check mr-2 text-blue-600"></i>
+                                Continuous Learning
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- PROJECTS -->
+        <!-- ============================= -->
+
+        <section
+            id="projects"
+            class="bg-gray-50 px-6 py-24 lg:px-8"
+        >
+
+            <div class="mx-auto max-w-7xl">
+
+                <div class="mb-16 text-center">
+
+                    <p class="font-semibold uppercase tracking-widest text-blue-600">
+                        My Work
+                    </p>
+
+                    <h2 class="mt-3 text-3xl font-bold sm:text-4xl">
+                        Featured Projects
+                    </h2>
+
+                    <p class="mx-auto mt-4 max-w-2xl text-gray-600">
+                        Some of the projects I've built while developing my
+                        frontend development skills.
+                    </p>
+
+                </div>
+
+
+                <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+
+                    <!-- Project 1 -->
+                    <article class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-2 hover:shadow-xl">
+
+                        <div class="flex h-30 items-center justify-center bg-blue-100">
+
+                            <img src="./asset/images/shop.co mockup-Photoroom.png" alt="">
+
+                        </div>
+
+                        <div class="p-6">
+
+                            <h3 class="text-xl font-bold">
+                                Shop.Co E-Commerce
+                            </h3>
+
+                            <p class="mt-3 leading-7 text-gray-600">
+                                A responsive fashion e-commerce interface with
+                                product browsing, categories, product details
+                                and shopping cart functionality.
+                            </p>
+
+                            <div class="mt-5 flex flex-wrap gap-2">
+
+                                <span class="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-700">
+                                    HTML
+                                </span>
+
+                                <span class="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-700">
+                                    Tailwind CSS
+                                </span>
+
+                                <span class="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-700">
+                                    JavaScript
+                                </span>
+
+                            </div>
+
+                            <div class="mt-6 flex gap-4">
+
+                                <a
+                                    href="https://shop-co-rose-nu.vercel.app/"
+                                    target="_blank"
+                                    class="font-semibold text-blue-600 hover:underline"
+                                >
+                                    Live Demo
+                                </a>
+
+                                <a
+                                    href="https://github.com/Dev-Victor01"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="font-semibold text-gray-700 hover:text-blue-600"
+                                >
+                                    GitHub
+                                </a>
+
+                            </div>
+                          
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Project 2 -->
+                    <article class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-2 hover:shadow-xl">
+
+                        <div class="flex h-30 items-center justify-center bg-blue-100">
+
+                            <img src="./asset/images/study match mockup.png" alt="study match mockup">
+
+                        </div>
+
+                        <div class="p-6">
+
+                            <h3 class="text-xl font-bold">
+                                Study Match
+                            </h3>
+
+                            <p class="mt-3 leading-7 text-gray-600">
+                                A student-focused platform concept designed to
+                                help students discover and connect with suitable
+                                study partners.
+                            </p>
+
+                            <div class="mt-5 flex flex-wrap gap-2">
+
+                                <span class="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-700">
+                                    HTML
+                                </span>
+
+                                <span class="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-700">
+                                    Tailwind CSS
+                                </span>
+
+                                <span class="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-700">
+                                    JavaScript
+                                </span>
+
+                            </div>
+
+                            <div class="mt-6">
+
+                                <span class="rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-600">
+                                    In Progress
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Project 3 -->
+                    <article class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-2 hover:shadow-xl">
+
+                        <div class="flex h-30 items-center justify-center bg-blue-100">
+
+                            <img 
+                                src="./asset/images/personal porfolio mockup.png" 
+                                alt="personal porfolio"
+                            >
+
+                        </div>
+
+                        <div class="p-6">
+
+                            <h3 class="text-xl font-bold">
+                                Personal Portfolio
+                            </h3>
+
+                            <p class="mt-3 leading-7 text-gray-600">
+                                A responsive personal portfolio website designed
+                                to showcase my skills, projects and development
+                                journey.
+                            </p>
+
+                            <div class="mt-5 flex flex-wrap gap-2">
+
+                                <span class="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-700">
+                                    HTML
+                                </span>
+
+                                <span class="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-700">
+                                    Tailwind CSS
+                                </span>
+
+                                <span class="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-700">
+                                    JavaScript
+                                </span>
+
+                            </div>
+
+                            <div class="mt-6">
+
+                                <span class="rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-600">
+                                    In Progress
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- CONTACT -->
+        <!-- ============================= -->
+
+        <section
+            id="contact"
+            class="px-6 py-24 lg:px-8"
+        >
+
+            <div class="mx-auto max-w-7xl">
+
+                <div class="mb-16 text-center">
+
+                    <p class="font-semibold uppercase tracking-widest text-blue-600">
+                        Contact
+                    </p>
+
+                    <h2 class="mt-3 text-3xl font-bold sm:text-4xl">
+                        Get In Touch
+                    </h2>
+
+                    <p class="mt-4 text-gray-600">
+                        Have a project or opportunity? Let's talk.
+                    </p>
+
+                </div>
+
+
+                <div class="grid gap-12 md:grid-cols-2">
+
+
+                    <!-- Contact Information -->
+                    <div>
+
+                        <h3 class="text-2xl font-bold">
+                            Let's work together
+                        </h3>
+
+                        <p class="mt-4 leading-8 text-gray-600">
+                            I'm open to freelance projects, internships,
+                            collaborations and entry-level frontend
+                            development opportunities.
+                        </p>
+
+
+                        <!-- Email -->
+                        <div class="mt-8 flex items-center gap-4">
+
+                            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-blue-600">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+
+                            <div>
+                                <p class="text-sm text-gray-500">
+                                    Email
+                                </p>
+
+                                <a
+                                    href="mailto:adeoyaoluwafemivictor@gmail.com"
+                                    class="font-medium hover:text-blue-600"
+                                >
+                                    adeoyaoluwafemivictor@gmail.com
+                                </a>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Phone -->
+                        <div class="mt-6 flex items-center gap-4">
+
+                            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-blue-600">
+                                <i class="fas fa-phone"></i>
+                            </div>
+
+                            <div>
+                                <p class="text-sm text-gray-500">
+                                    Phone
+                                </p>
+
+                                <a
+                                    href="tel:+2349037283128"
+                                    class="font-medium hover:text-blue-600"
+                                >
+                                    +234 903 728 3128
+                                </a>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Social -->
+                        <div class="mt-8 flex gap-5">
+
+                            <a
+                                href="https://github.com/Dev-Victor01"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="flex h-11 w-11 items-center justify-center rounded-full bg-gray-100 text-xl transition hover:bg-blue-600 hover:text-white"
+                            >
+                                <i class="fab fa-github"></i>
+                            </a>
+
+                            <a
+                                href="https://www.linkedin.com/in/adeoya-oluwafemi-victor-538869427/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="flex h-11 w-11 items-center justify-center rounded-full bg-gray-100 text-xl transition hover:bg-blue-600 hover:text-white"
+                            >
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+
+                            <a
+                                href="mailto:adeoyaoluwafemivictor@gmail.com"
+                                class="flex h-11 w-11 items-center justify-center rounded-full bg-gray-100 text-xl transition hover:bg-blue-600 hover:text-white"
+                            >
+                                <i class="fas fa-envelope"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Contact Form -->
+                    <form
+                        id="contactForm"
+                        class="rounded-2xl border border-gray-200 bg-white p-6 shadow-lg sm:p-8"
+                    >
+
+                        <div class="grid gap-5">
+
+                            <div>
+                                <label
+                                    for="name"
+                                    class="mb-2 block font-medium"
+                                >
+                                    Your Name
+                                </label>
+
+                                <input
+                                    id="name"
+                                    type="text"
+                                    placeholder="Enter your name"
+                                    required
+                                    class="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none transition focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
+                                >
+                            </div>
+
+
+                            <div>
+                                <label
+                                    for="email"
+                                    class="mb-2 block font-medium"
+                                >
+                                    Your Email
+                                </label>
+
+                                <input
+                                    id="email"
+                                    type="email"
+                                    placeholder="Enter your email"
+                                    required
+                                    class="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none transition focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
+                                >
+                            </div>
+
+
+                            <div>
+                                <label
+                                    for="subject"
+                                    class="mb-2 block font-medium"
+                                >
+                                    Subject
+                                </label>
+
+                                <input
+                                    id="subject"
+                                    type="text"
+                                    placeholder="What is this about?"
+                                    required
+                                    class="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none transition focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
+                                >
+                            </div>
+
+
+                            <div>
+                                <label
+                                    for="message"
+                                    class="mb-2 block font-medium"
+                                >
+                                    Message
+                                </label>
+
+                                <textarea
+                                    id="message"
+                                    rows="5"
+                                    placeholder="Write your message..."
+                                    required
+                                    class="w-full resize-none rounded-lg border border-gray-300 px-4 py-3 outline-none transition focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
+                                ></textarea>
+                            </div>
+
+
+                            <button
+                                type="submit"
+                                class="rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700"
+                            >
+                                <i class="fas fa-paper-plane mr-2"></i>
+                                Send Message
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ============================= -->
+    <!-- FOOTER -->
+    <!-- ============================= -->
+
+    <footer class="bg-gray-950 px-6 py-8 text-white">
+
+        <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 md:flex-row">
+
+            <p class="text-sm text-gray-400">
+                &copy; 2026 Oluwafemi Adeoya. All rights reserved.
+            </p>
+
+            <div class="flex gap-5">
+
+                <a
+                    href="https://github.com/Dev-Victor01"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-gray-400 transition hover:text-white"
+                >
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/adeoya-oluwafemi-victor-538869427/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-gray-400 transition hover:text-white"
+                >
+                    <i class="fab fa-linkedin"></i>
+                </a>
+
+                <a
+                    href="mailto:adeoyaoluwafemivictor@gmail.com"
+                    class="text-gray-400 transition hover:text-white"
+                >
+                    <i class="fas fa-envelope"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ============================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ============================= -->
+
+</body>
+</html>
