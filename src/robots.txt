@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://victor-adeoya-portfolio.vercel.app/sitemap.xml
