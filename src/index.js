@@ -465,4 +465,46 @@ ${message}`
 
     });
 
+
+    // =====================================================
+    // PROJECT COUNTERS
+    // =====================================================
+    const projectCards = document.querySelectorAll("[data-project-status]");
+    const completedProjects = [...projectCards].filter(card => card.dataset.projectStatus === "completed").length;
+    const pendingProjects = [...projectCards].filter(card => card.dataset.projectStatus === "pending").length;
+    const totalProjects = projectCards.length;
+
+    function animateProjectCounter(element, target) {
+        if (!element) return;
+        const start = performance.now();
+        const duration = 900;
+        function tick(now) {
+            const progress = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            element.textContent = String(Math.round(target * eased)).padStart(2, "0");
+            if (progress < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+    }
+
+    animateProjectCounter(document.getElementById("completed-count"), completedProjects);
+    animateProjectCounter(document.getElementById("pending-count"), pendingProjects);
+    animateProjectCounter(document.getElementById("total-count"), totalProjects);
+
+    // PROJECT FILTERS
+    const projectFilters = document.querySelectorAll(".project-filter");
+    projectFilters.forEach(filter => {
+        filter.addEventListener("click", () => {
+            const selected = filter.dataset.filter;
+
+            projectFilters.forEach(button => button.classList.remove("active"));
+            filter.classList.add("active");
+
+            projectCards.forEach(card => {
+                const matches = selected === "all" || card.dataset.projectStatus === selected;
+                card.style.display = matches ? "block" : "none";
+            });
+        });
+    });
+
 });

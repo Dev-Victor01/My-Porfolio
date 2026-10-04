@@ -1,1 +1,91 @@
 @import "tailwindcss";
+
+/* =====================================================
+   PORTFOLIO DARK MODERN THEME
+   Visual-only layer: existing page copy/content is preserved.
+===================================================== */
+html { scroll-behavior: smooth; }
+body.portfolio-reference-theme {
+  margin:0;
+  background:#070d13 !important;
+  color:#f8fafc !important;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background-image:
+    radial-gradient(circle at 8% 8%,rgba(0,225,170,.09),transparent 18%),
+    radial-gradient(circle at 90% 76%,rgba(65,90,255,.08),transparent 18%),
+    linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px) !important;
+  background-size:auto,auto,48px 48px,48px 48px !important;
+}
+body.portfolio-reference-theme header{background:rgba(44, 52, 59, 0.88)!important;border-color:rgba(234, 228, 228, 0.07)!important}
+body.portfolio-reference-theme main section{background:rgba(7,13,19,.84)!important;color:#f8fafc!important;border-color:rgba(148,163,184,.07)!important}
+body.portfolio-reference-theme main section:nth-of-type(even){background:rgba(10,18,27,.72)!important}
+body.portfolio-reference-theme .bg-gray-50,body.portfolio-reference-theme .bg-white{background:transparent!important}
+body.portfolio-reference-theme .text-gray-900,body.portfolio-reference-theme .text-gray-800,body.portfolio-reference-theme .text-gray-700{color:#f1f5f9!important}
+body.portfolio-reference-theme .text-gray-600,body.portfolio-reference-theme .text-gray-500{color:#94a9bf!important}
+body.portfolio-reference-theme .text-blue-600{color:#24f0a7!important}
+body.portfolio-reference-theme .text-blue-700{color:#69f6c5!important}
+body.portfolio-reference-theme .bg-blue-600{background:#16eaa0!important;color:#06110d!important}
+body.portfolio-reference-theme .bg-blue-700{background:#43f4b8!important;color:#06110d!important}
+body.portfolio-reference-theme .bg-blue-100{background:rgba(22,234,160,.12)!important}
+body.portfolio-reference-theme .border-gray-200,body.portfolio-reference-theme .border-gray-100{border-color:rgba(104,145,181,.20)!important}
+body.portfolio-reference-theme header a{transition:.2s ease}
+body.portfolio-reference-theme section > div{position:relative;z-index:1}
+body.portfolio-reference-theme h1,body.portfolio-reference-theme h2,body.portfolio-reference-theme h3{color:#f8fafc!important}
+body.portfolio-reference-theme section > div > div:first-child p{color:#24f0a7!important}
+body.portfolio-reference-theme main section:first-of-type{background:rgba(7,13,19,.88)!important}
+body.portfolio-reference-theme main section:first-of-type h1 span{color:#1ff2a4!important}
+body.portfolio-reference-theme main section:first-of-type a{border-radius:.8rem}
+body.portfolio-reference-theme main section:first-of-type img{border-color:rgba(255,255,255,.08)!important}
+body.portfolio-reference-theme article{background:linear-gradient(145deg,rgba(14,25,35,.90),rgba(7,14,21,.82))!important;border-color:rgba(104,145,181,.20)!important;color:#f8fafc!important;border-radius:1.25rem!important;box-shadow:0 20px 55px rgba(0,0,0,.16)!important}
+body.portfolio-reference-theme article:hover{border-color:rgba(39,239,169,.35)!important;transform:translateY(-5px);box-shadow:0 22px 55px rgba(0,0,0,.28)!important}
+body.portfolio-reference-theme article p{color:#aab8ca!important}
+body.portfolio-reference-theme article span{color:#69f6c5}
+body.portfolio-reference-theme article a{color:#24f0a7!important}
+body.portfolio-reference-theme article a:hover{color:#7ff8d0!important}
+body.portfolio-reference-theme form input,body.portfolio-reference-theme form textarea{background:#08111a!important;color:#f8fafc!important;border-color:rgba(104,145,181,.20)!important}
+body.portfolio-reference-theme form input::placeholder,body.portfolio-reference-theme form textarea::placeholder{color:#526274!important}
+body.portfolio-reference-theme form label{color:#dbe7f2!important}
+body.portfolio-reference-theme footer{background:#05090e!important;border-color:rgba(255,255,255,.07)!important}
+body.portfolio-reference-theme .portfolio-counter-panel{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:stretch;border:1px solid #203346;border-radius:22px;background:linear-gradient(180deg,rgba(14,24,34,.92),rgba(9,17,25,.92));box-shadow:0 15px 50px rgba(0,0,0,.18);overflow:hidden;margin:3rem 0 3.5rem}
+body.portfolio-reference-theme .portfolio-counter-item{min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:22px 18px;text-align:center}
+body.portfolio-reference-theme .portfolio-counter-divider{width:1px;height:80%;align-self:center;background:#203346}
+body.portfolio-reference-theme .portfolio-counter-icon{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:8px}
+body.portfolio-reference-theme .portfolio-green{color:#00e5a8!important}.portfolio-counter-icon.portfolio-green{background:rgba(0,229,168,.18);box-shadow:0 0 28px rgba(0,229,168,.12)}
+body.portfolio-reference-theme .portfolio-blue{color:#22a9ff!important}.portfolio-counter-icon.portfolio-blue{background:rgba(34,169,255,.18);box-shadow:0 0 28px rgba(34,169,255,.12)}
+body.portfolio-reference-theme .portfolio-purple{color:#9b7cff!important}.portfolio-counter-icon.portfolio-purple{background:rgba(155,124,255,.18);box-shadow:0 0 28px rgba(155,124,255,.12)}
+body.portfolio-reference-theme .portfolio-counter-number{font-size:48px;line-height:1;font-weight:800;letter-spacing:-.04em}
+body.portfolio-reference-theme .portfolio-counter-item h3{font-size:20px;font-weight:700;margin:8px 0 0;color:#f7f8fb!important}
+body.portfolio-reference-theme .portfolio-counter-item p{font-size:14px;color:#9fb0c5!important;margin:6px 0 0}
+/* Prevent the existing reveal script from making text disappear if JS loads late. */
+body.portfolio-reference-theme .reveal-element{opacity:1!important;transform:none!important}
+@media(max-width:767px){
+ body.portfolio-reference-theme .portfolio-counter-panel{grid-template-columns:1fr}
+ body.portfolio-reference-theme .portfolio-counter-divider{width:80%;height:1px}
+ body.portfolio-reference-theme .portfolio-counter-item{min-height:145px}
+ body.portfolio-reference-theme .portfolio-counter-number{font-size:42px}
+}
+/* Project section: reference-theme heading + filters */
+body.portfolio-reference-theme .project-section-heading{margin:0 0 54px;text-align:center}
+body.portfolio-reference-theme .project-heading-copy{max-width:780px;margin:0 auto}
+body.portfolio-reference-theme .project-heading-label{display:flex;align-items:center;justify-content:center;gap:13px;color:#19e9a3;font-size:15px;font-weight:800;letter-spacing:.22em}
+body.portfolio-reference-theme .project-heading-line{display:block;width:48px;height:2px;background:#19e9a3;border-radius:999px;box-shadow:0 0 12px rgba(25,233,163,.35)}
+body.portfolio-reference-theme .project-heading-copy h2{margin:16px 0 0;font-size:clamp(2.25rem,5vw,3.45rem);font-weight:800;line-height:1.08;letter-spacing:-.035em;color:#f8fafc!important}
+body.portfolio-reference-theme .project-heading-copy h2 span{color:#19e9a3}
+body.portfolio-reference-theme .project-heading-copy p{max-width:760px;margin:22px auto 0;font-size:17px;line-height:1.65;color:#9eb1c8!important}
+body.portfolio-reference-theme .project-list-header{display:flex;align-items:center;justify-content:space-between;gap:30px;margin:0 0 30px}
+body.portfolio-reference-theme .project-list-header h3{margin:0;font-size:30px;font-weight:800;color:#f8fafc!important}
+body.portfolio-reference-theme .project-list-header p{margin:7px 0 0;color:#9eb1c8!important;font-size:15px}
+body.portfolio-reference-theme .project-filters{display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+body.portfolio-reference-theme .project-filter{border:1px solid #203346!important;background:rgba(10,20,30,.62)!important;color:#d9e6f3!important;border-radius:999px;padding:10px 22px;font-size:14px;font-weight:700;cursor:pointer;transition:.2s ease}
+body.portfolio-reference-theme .project-filter:hover{border-color:rgba(25,233,163,.5)!important;color:#fff!important}
+body.portfolio-reference-theme .project-filter.active{background:#19e9a3!important;border-color:#19e9a3!important;color:#06110d!important;box-shadow:0 8px 25px rgba(25,233,163,.16)}
+@media (max-width:768px){
+body.portfolio-reference-theme .project-section-heading{margin-bottom:42px}
+body.portfolio-reference-theme .project-heading-label{font-size:12px;gap:9px}
+body.portfolio-reference-theme .project-heading-line{width:30px}
+body.portfolio-reference-theme .project-heading-copy h2{font-size:2.25rem}
+body.portfolio-reference-theme .project-heading-copy p{font-size:15px}
+body.portfolio-reference-theme .project-list-header{align-items:flex-start;flex-direction:column;margin-bottom:24px}
+body.portfolio-reference-theme .project-list-header h3{font-size:25px}
+body.portfolio-reference-theme .project-filters{justify-content:flex-start}}
