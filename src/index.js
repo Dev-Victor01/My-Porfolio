@@ -149,188 +149,186 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateActiveLink();
 
-
-    // =====================================================
-    // CONTACT FORM
-    // =====================================================
-
-    const contactForm =
-        document.getElementById("contactForm");
-
-    if (contactForm) {
-
-        contactForm.addEventListener(
-            "submit",
-            function (event) {
-
-                event.preventDefault();
-
-                const name =
-                    document.getElementById("name").value.trim();
-
-                const email =
-                    document.getElementById("email").value.trim();
-
-                const subject =
-                    document.getElementById("subject").value.trim();
-
-                const message =
-                    document.getElementById("message").value.trim();
-
-                // -----------------------------------------
-                // VALIDATION
-                // -----------------------------------------
-
-                if (!name || !email || !subject || !message) {
-
-                    showMessage(
-                        "Please fill in all fields.",
-                        "error"
-                    );
-
-                    return;
-                }
-
-                // Email validation
-                const emailPattern =
-                    /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-                if (!emailPattern.test(email)) {
-
-                    showMessage(
-                        "Please enter a valid email address.",
-                        "error"
-                    );
-
-                    return;
-                }
-
-
-                // -----------------------------------------
-                // BUTTON
-                // -----------------------------------------
-
-                const submitButton =
-                    contactForm.querySelector(
-                        'button[type="submit"]'
-                    );
-
-                const originalButton =
-                    submitButton.innerHTML;
-
-                submitButton.disabled = true;
-
-                submitButton.innerHTML = `
-                    <i class="fas fa-spinner fa-spin mr-2"></i>
-                    Preparing Message...
-                `;
-
-
-                // -----------------------------------------
-                // CREATE EMAIL
-                // -----------------------------------------
-
-                const recipient =
-                    "adeoyaoluwafemivictor@gmail.com";
-
-                const emailSubject =
-                    encodeURIComponent(
-                        subject
-                    );
-
-                const emailBody =
-                    encodeURIComponent(
-                        `Hello Oluwafemi,
-
-Name: ${name}
-Email: ${email}
-
-Message:
-${message}`
-                    );
-
-
-                // -----------------------------------------
-                // OPEN EMAIL CLIENT
-                // -----------------------------------------
-
-                const mailtoLink =
-                    `mailto:${recipient}?subject=${emailSubject}&body=${emailBody}`;
-
-
-                setTimeout(() => {
-
-                    window.location.href =
-                        mailtoLink;
-
-                    submitButton.disabled = false;
-
-                    submitButton.innerHTML =
-                        originalButton;
-
-                }, 700);
-
-            }
-        );
-
-    }
-
-
-    // =====================================================
-    // FORM MESSAGE
-    // =====================================================
-
-    function showMessage(message, type) {
-
-        // Remove existing message
-        const existingMessage =
-            document.getElementById(
-                "form-message"
-            );
-
-        if (existingMessage) {
-            existingMessage.remove();
-        }
-
-
-        const messageElement =
-            document.createElement("div");
-
-        messageElement.id =
-            "form-message";
-
-        messageElement.className =
-            type === "error"
-                ? "mb-5 rounded-lg bg-red-100 px-4 py-3 text-sm text-red-700"
-                : "mb-5 rounded-lg bg-green-100 px-4 py-3 text-sm text-green-700";
-
-
-        messageElement.innerHTML = `
-            <i class="fas ${
-                type === "error"
-                    ? "fa-circle-exclamation"
-                    : "fa-circle-check"
-            } mr-2"></i>
-
-            ${message}
-        `;
-
-
-        contactForm.prepend(
-            messageElement
-        );
-
-
-        // Remove message after 4 seconds
-        setTimeout(() => {
-
-            messageElement.remove();
-
-        }, 4000);
-
-    }
-
-
+        // ===================================================== 
+    // CONTACT FORM 
+    // ===================================================== 
+ 
+    const contactForm = 
+        document.getElementById("contactForm"); 
+ 
+    if (contactForm) { 
+ 
+        contactForm.addEventListener( 
+            "submit", 
+            function (event) { 
+ 
+                event.preventDefault(); 
+ 
+                const name = 
+                    document.getElementById("name").value.trim(); 
+ 
+                const email = 
+                    document.getElementById("email").value.trim(); 
+ 
+                const subject = 
+                    document.getElementById("subject").value.trim(); 
+ 
+                const message = 
+                    document.getElementById("message").value.trim(); 
+ 
+                // ----------------------------------------- 
+                // VALIDATION 
+                // ----------------------------------------- 
+ 
+                if (!name || !email || !subject || !message) { 
+ 
+                    showMessage( 
+                        "Please fill in all fields.", 
+                        "error" 
+                    ); 
+ 
+                    return; 
+                } 
+ 
+                // Email validation 
+                const emailPattern = 
+                    /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+ 
+                if (!emailPattern.test(email)) { 
+ 
+                    showMessage( 
+                        "Please enter a valid email address.", 
+                        "error" 
+                    ); 
+ 
+                    return; 
+                } 
+ 
+ 
+                // ----------------------------------------- 
+                // BUTTON 
+                // ----------------------------------------- 
+ 
+                const submitButton = 
+                    contactForm.querySelector( 
+                        'button[type="submit"]' 
+                    ); 
+ 
+                const originalButton = 
+                    submitButton.innerHTML; 
+ 
+                submitButton.disabled = true; 
+ 
+                submitButton.innerHTML = ` 
+                    <i class="fas fa-spinner fa-spin mr-2"></i> 
+                    Preparing Message... 
+                `; 
+ 
+ 
+                // ----------------------------------------- 
+                // CREATE EMAIL 
+                // ----------------------------------------- 
+ 
+                const recipient = 
+                    "adeoyaoluwafemivictor@gmail.com"; 
+ 
+                const emailSubject = 
+                    encodeURIComponent( 
+                        subject 
+                    ); 
+ 
+                const emailBody = 
+                    encodeURIComponent( 
+                        `Hello Oluwafemi, 
+ 
+Name: ${name} 
+Email: ${email} 
+ 
+Message: 
+${message}` 
+                    ); 
+ 
+ 
+                // ----------------------------------------- 
+                // OPEN EMAIL CLIENT 
+                // ----------------------------------------- 
+ 
+                const mailtoLink = 
+                    `mailto:${recipient}?subject=${emailSubject}&body=${emailBody}`; 
+ 
+ 
+                setTimeout(() => { 
+ 
+                    window.location.href = 
+                        mailtoLink; 
+ 
+                    submitButton.disabled = false; 
+ 
+                    submitButton.innerHTML = 
+                        originalButton; 
+ 
+                }, 700); 
+ 
+            } 
+        ); 
+ 
+    } 
+ 
+ 
+    // ===================================================== 
+    // FORM MESSAGE 
+    // ===================================================== 
+ 
+    function showMessage(message, type) { 
+ 
+        // Remove existing message 
+        const existingMessage = 
+            document.getElementById( 
+                "form-message" 
+            ); 
+ 
+        if (existingMessage) { 
+            existingMessage.remove(); 
+        } 
+ 
+ 
+        const messageElement = 
+            document.createElement("div"); 
+ 
+        messageElement.id = 
+            "form-message"; 
+ 
+        messageElement.className = 
+            type === "error" 
+                ? "mb-5 rounded-lg bg-red-100 px-4 py-3 text-sm text-red-700" 
+                : "mb-5 rounded-lg bg-green-100 px-4 py-3 text-sm text-green-700"; 
+ 
+ 
+        messageElement.innerHTML = ` 
+            <i class="fas ${ 
+                type === "error" 
+                    ? "fa-circle-exclamation" 
+                    : "fa-circle-check" 
+            } mr-2"></i> 
+ 
+            ${message} 
+        `; 
+ 
+ 
+        contactForm.prepend( 
+            messageElement 
+        ); 
+ 
+ 
+        // Remove message after 4 seconds 
+        setTimeout(() => { 
+ 
+            messageElement.remove(); 
+ 
+        }, 4000); 
+ 
+    } 
+ 
     // =====================================================
     // SCROLL REVEAL
     // =====================================================
@@ -467,44 +465,115 @@ ${message}`
 
 
     // =====================================================
-    // PROJECT COUNTERS
+    // PROJECTS: project.html is the single source of truth
+    // Homepage always shows the latest 3 projects.
+    // Add a new project at the TOP of project.html and it
+    // will automatically become the newest homepage project.
     // =====================================================
-    const projectCards = document.querySelectorAll("[data-project-status]");
-    const completedProjects = [...projectCards].filter(card => card.dataset.projectStatus === "completed").length;
-    const pendingProjects = [...projectCards].filter(card => card.dataset.projectStatus === "pending").length;
-    const totalProjects = projectCards.length;
+    const homepageGrid = document.getElementById("homepage-project-grid");
+    const projectPageGrid = document.getElementById("all-projects-grid");
 
-    function animateProjectCounter(element, target) {
-        if (!element) return;
-        const start = performance.now();
-        const duration = 900;
-        function tick(now) {
-            const progress = Math.min((now - start) / duration, 1);
-            const eased = 1 - Math.pow(1 - progress, 3);
-            element.textContent = String(Math.round(target * eased)).padStart(2, "0");
-            if (progress < 1) requestAnimationFrame(tick);
+    async function loadProjects() {
+        let sourceCards = [];
+
+        try {
+            const response = await fetch("./project.html", { cache: "no-store" });
+            if (!response.ok) throw new Error("Could not load project.html");
+
+            const html = await response.text();
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, "text/html");
+
+            sourceCards = [...doc.querySelectorAll("#all-projects-grid [data-project-status]")];
+        } catch (error) {
+            // Fallback: use any project cards already present on this page.
+            sourceCards = [...document.querySelectorAll("[data-project-status]")];
         }
-        requestAnimationFrame(tick);
-    }
 
-    animateProjectCounter(document.getElementById("completed-count"), completedProjects);
-    animateProjectCounter(document.getElementById("pending-count"), pendingProjects);
-    animateProjectCounter(document.getElementById("total-count"), totalProjects);
+        const completedProjects = sourceCards.filter(
+            card => card.dataset.projectStatus === "completed"
+        ).length;
 
-    // PROJECT FILTERS
-    const projectFilters = document.querySelectorAll(".project-filter");
-    projectFilters.forEach(filter => {
-        filter.addEventListener("click", () => {
-            const selected = filter.dataset.filter;
+        const pendingProjects = sourceCards.filter(
+            card => card.dataset.projectStatus === "pending"
+        ).length;
 
-            projectFilters.forEach(button => button.classList.remove("active"));
-            filter.classList.add("active");
+        const totalProjects = sourceCards.length;
 
-            projectCards.forEach(card => {
-                const matches = selected === "all" || card.dataset.projectStatus === selected;
-                card.style.display = matches ? "block" : "none";
+        function animateProjectCounter(element, target) {
+            if (!element) return;
+
+            const startTime = performance.now();
+            const duration = 900;
+
+            function tick(now) {
+                const progress = Math.min((now - startTime) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+
+                element.textContent = String(
+                    Math.round(target * eased)
+                ).padStart(2, "0");
+
+                if (progress < 1) requestAnimationFrame(tick);
+            }
+
+            requestAnimationFrame(tick);
+        }
+
+        animateProjectCounter(
+            document.getElementById("completed-count"),
+            completedProjects
+        );
+
+        animateProjectCounter(
+            document.getElementById("pending-count"),
+            pendingProjects
+        );
+
+        animateProjectCounter(
+            document.getElementById("total-count"),
+            totalProjects
+        );
+
+        // On the homepage, only the first 3 projects from project.html are shown.
+        if (homepageGrid) {
+            homepageGrid.innerHTML = "";
+
+            sourceCards.slice(0, 3).forEach(card => {
+                const clonedCard = card.cloneNode(true);
+                homepageGrid.appendChild(clonedCard);
+            });
+        }
+
+        // On project.html, the cards already exist in the page.
+        // This keeps the full archive visible.
+        const visibleProjectCards = homepageGrid
+            ? [...homepageGrid.querySelectorAll("[data-project-status]")]
+            : [...document.querySelectorAll("#all-projects-grid [data-project-status]")];
+
+        const projectFilters = document.querySelectorAll(".project-filter");
+
+        projectFilters.forEach(filter => {
+            filter.addEventListener("click", () => {
+                const selected = filter.dataset.filter;
+
+                projectFilters.forEach(button =>
+                    button.classList.remove("active")
+                );
+
+                filter.classList.add("active");
+
+                visibleProjectCards.forEach(card => {
+                    const matches =
+                        selected === "all" ||
+                        card.dataset.projectStatus === selected;
+
+                    card.style.display = matches ? "" : "none";
+                });
             });
         });
-    });
+    }
+
+    loadProjects();
 
 });

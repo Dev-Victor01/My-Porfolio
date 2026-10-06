@@ -17,7 +17,7 @@ body.portfolio-reference-theme {
     linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px) !important;
   background-size:auto,auto,48px 48px,48px 48px !important;
 }
-body.portfolio-reference-theme header{background:rgba(44, 52, 59, 0.88)!important;border-color:rgba(234, 228, 228, 0.07)!important}
+body.portfolio-reference-theme header{background:rgba(62, 188, 118, 0.88)!important;border-color:rgba(234, 228, 228, 0.07)!important}
 body.portfolio-reference-theme main section{background:rgba(7,13,19,.84)!important;color:#f8fafc!important;border-color:rgba(148,163,184,.07)!important}
 body.portfolio-reference-theme main section:nth-of-type(even){background:rgba(10,18,27,.72)!important}
 body.portfolio-reference-theme .bg-gray-50,body.portfolio-reference-theme .bg-white{background:transparent!important}

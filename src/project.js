@@ -1,0 +1,1 @@
+ document.getElementById("project-year").textContent = new Date().getFullYear();
